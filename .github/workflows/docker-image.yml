@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag icamachom1/express-randomquotes:latest
+      run: docker build randomquotes --file randomquotes/Dockerfile --tag icamachom1/express-randomquotes:latest
       
     - name: Docker Push
       run: docker push icamachom1/express-randomquotes
